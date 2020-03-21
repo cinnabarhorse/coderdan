@@ -14,10 +14,10 @@ interface HireMePageProps {
 
 const HireMePage = (props: HireMePageProps) => {
 
-    const [email, setEmail] = useState<string>("dmathieuva@gmail.com")
-    const [name, setName] = useState<string>("hello")
-    const [subject, setSubject] = useState("Email from CoderDannn Site")
-    const [message, setMessage] = useState<string>("hey!")
+    const [email, setEmail] = useState<string>("")
+    const [name, setName] = useState<string>("")
+    const [subject, setSubject] = useState("Hi Coder Dan")
+    const [message, setMessage] = useState<string>("")
 
     const [submitting, setSubmitting] = useState(false)
 
@@ -127,7 +127,7 @@ const HireMePage = (props: HireMePageProps) => {
                         }
 
                         .formContainer {
-                            margin-top:20px;
+                            margin-top:30px;
                         }
 
                         .aboutMeContainer {
@@ -179,7 +179,7 @@ const HireMePage = (props: HireMePageProps) => {
                         </div>
 
                         <div className="contact">
-                            Contact me
+                            contact me:
                         </div>
                     </Col>
                 </Row>

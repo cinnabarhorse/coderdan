@@ -1,98 +1,102 @@
 import Head from 'next/head'
 import { Container } from 'react-bootstrap'
-import NextStyledNavBar from '../components/reusable/NextStyledNavBar'
 import Layout from '../components/reusable/Layout'
 import SocialIcon from '../components/socialIcons'
 import ProjectsPage from '../components/ProjectsPage'
 import SkillsPage from '../components/SkillsPage'
 import TokenPage from '../components/TokenPage'
 import HireMePage from '../components/HireMePage'
+import { themeColor } from '../theme'
+import { useState } from 'react'
 
-const Home = () => (
-  <Container>
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+const Home = () => {
 
-    <Layout>
+  const [hovering, setHovering] = useState(false)
+
+  return (
+
+    <Container>
+      <Head>
+        <title>coder dan (web3 developer)</title>
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+
+      <Layout>
 
 
-      <div className="imageContainer">
-        <img className="profileImage" src="coderdan.jpg" />
-      </div>
-
-      <div className="description">
-        hi, i'm coder dan
+        <div className="imageContainer">
+          <img className="profileImage" src="coderdan.jpg" />
         </div>
 
-      <div className="subtitle">
-        i make awesome web3 experiences
+        <div className="description">
+          hi, i'm coder dan
+        </div>
+
+        <div className="subtitle">
+          i make awesome web3 experiences
         </div>
 
 
-      <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
-        <SocialIcon
-          iconSize={44}
-          twitter="https://twitter.com/coderdannn"
-          medium="https://medium.com/@coderdannn"
-          dev="https://dev.to/coderdannn"
-        />
-      </div>
+        <div style={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
+          <SocialIcon
+            iconSize={44}
+            twitter="https://twitter.com/coderdannn"
+            medium="https://medium.com/@coderdannn"
+            dev="https://dev.to/coderdannn"
+          />
+        </div>
 
 
 
-      <div className="viewProjectsContainer">
-        <a href="#projects" className="viewProjects">
-          <div>view projects
- </div>
+        <div className="viewProjectsContainer">
+          <a onMouseEnter={() => setHovering(true)} onMouseLeave={() => setHovering(false)} href="#projects" className="viewProjects">
+            <div>view projects</div>
+            <div className="v">v</div>
 
-          <div className="v">v</div>
+          </a>
+        </div>
 
+
+
+
+        <div style={{ position: 'relative', top: 100 }} id="projects"></div>
+
+        <div>
+          <ProjectsPage />
+        </div>
+
+
+        <div style={{ position: 'relative', top: 100 }} id="skills"></div>
+
+        <div>
+          <SkillsPage />
+        </div>
+
+
+        <div style={{ position: 'relative', top: 100 }} id="token"></div>
+
+        <div>
+          <TokenPage />
+        </div>
+
+
+
+        <div style={{ position: 'relative', top: 100 }} id="hire"></div>
+        <div>
+          <HireMePage />
+        </div>
+
+        <footer>
+          <a
+            href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Copyright 2019-2020 Daniel Mathieu
         </a>
-      </div>
+        </footer>
 
-
-
-
-      <div style={{ position: 'relative', top: 100 }} id="projects"></div>
-
-      <div>
-        <ProjectsPage />
-      </div>
-
-
-      <div style={{ position: 'relative', top: 100 }} id="skills"></div>
-
-      <div>
-        <SkillsPage />
-      </div>
-
-
-      <div style={{ position: 'relative', top: 100 }} id="token"></div>
-
-      <div>
-        <TokenPage />
-      </div>
-
-
-
-      <div style={{ position: 'relative', top: 100 }} id="hire"></div>
-      <div>
-        <HireMePage />
-      </div>
-
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Copyright 2019-2020 Daniel Mathieu
-        </a>
-      </footer>
-
-      <style jsx>{`
+        <style jsx>{`
       .container {
         min-height: 100vh;
         padding: 0 0.5rem;
@@ -161,27 +165,36 @@ const Home = () => (
         display:flex;
         justify-content:center;
         width:100%;
+        height:120px;
+       
 
       }
 
       .viewProjects {
-        margin-top:10px;
+        margin-top:15px;
         font-size:24px;
-          text-align:center;
-          font-weight:300;
-          background:none;
-          border:none;
+        text-align:center;
+        font-weight:300;
+        background:none;
+        border:none;
+       
+        transition:color 0.2s;
+      }
+
+      .viewProjects:hover {
+        color:${themeColor};
       }
 
       .v {
-        margin-top:0;
+        margin-top:${hovering ? 10 : 0}px;
+        transition:margin-top 0.2s;
       }
 
    
 
     `}</style>
 
-      <style jsx global>{`
+        <style jsx global>{`
       html,
       body {
         padding: 0;
@@ -195,8 +208,10 @@ const Home = () => (
       }
     `}</style>
 
-    </Layout>
-  </Container>
-)
+      </Layout>
+    </Container>
+
+  )
+}
 
 export default Home
