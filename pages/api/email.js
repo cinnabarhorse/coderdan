@@ -40,6 +40,7 @@ export default ({ query: { id } }, res) => {
         res.status(200).json(data)
     }, function (error) {
         console.error(error);
+        res.status(400).json(error)
     });
 
     /*  var SibApiV3Sdk = require('sib-api-v3-typescript');
