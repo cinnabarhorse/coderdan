@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitter, faGithub, faMedium, faDev, faDiscord } from "@fortawesome/free-brands-svg-icons"
+import { themeSecondary, themeColor } from "../theme";
 
 interface SocialIconProps {
     iconSize: number
@@ -25,12 +26,15 @@ const SocialIcon = (props: SocialIconProps) => {
                         height:${iconSize}px !important;
                         background:none;
                         border:none;
-                        color:#C99D66 !important;
+                        color:${themeColor} !important;
                         margin-right:10px;
                         padding:8px;
                     }
 
-                 
+                    .iconContainer:hover {
+                        color:${themeSecondary} !important;
+                    }
+
                   
                 `}
             </style>

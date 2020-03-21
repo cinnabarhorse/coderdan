@@ -39,6 +39,7 @@ export var rightLinks = [
     {
         name: "hire me",
         href: "#hire",
+        highlight: true
     },
 
 ]

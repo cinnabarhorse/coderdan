@@ -1,5 +1,6 @@
 
 export const themeColor = "#C99D66"
+export const themeSecondary = "#54397D"
 export const darkThemeColor = "#3d3d3d"
 export const lightThemeColor = "#FAFBFC"
 export const themeGray = "gray"

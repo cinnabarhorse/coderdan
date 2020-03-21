@@ -20,13 +20,14 @@ interface NextStyledButtonProps {
     disabled?: boolean //Disabled
     disabledStyle?: string // Disabled style
     submitting?: boolean
+    submittingStyle?: string
 
 
 }
 
 const NextStyledButton = (props: NextStyledButtonProps) => {
 
-    const { title, titleStyles, onClick, icon, iconPosition, iconStyle, iconHoverStyle, disabled, disabledStyle, defaultStyle, HW_480, HW_767, HW_1024, HW_1367, hoverStyle, activeStyle, additionalStyles, submitting, submittingTitle } = props
+    const { title, titleStyles, onClick, icon, iconPosition, iconStyle, iconHoverStyle, disabled, disabledStyle, defaultStyle, hoverStyle, activeStyle, additionalStyles, submitting, submittingTitle, submittingStyle } = props
 
     const [hovering, setHovering] = useState(false)
 
@@ -53,7 +54,8 @@ const NextStyledButton = (props: NextStyledButtonProps) => {
                     justify-content:center;
                     ${defaultStyle};
                     ${additionalStyles};
-                    ${disabled ? disabledStyle : undefined}
+                    ${disabled ? disabledStyle : undefined};
+                    ${submitting && submittingStyle};
                 }
 
                 .titleStyle {

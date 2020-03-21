@@ -31,10 +31,12 @@ const Layout = (props: LayoutProps) => {
                 a {
                     color:${themeGray};
                     text-decoration:none !important;
+                    transition:color 0.2s;
                 }
 
                 a:hover {
                     color:${themeColor};
+
                 }
 
                 .btn-primary {

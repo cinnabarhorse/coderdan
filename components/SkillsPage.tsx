@@ -28,7 +28,7 @@ const SkillsPage = (props: SkillsPageProps) => {
         {
             title: "web3",
             icon: "",
-            items: ["web3.js", "ethers.js", "Ganache", "Remix, Metamask", "BlockNative"]
+            items: ["web3.js", "ethers.js", "Ganache", "Remix", "Metamask", "BlockNative"]
         },
         {
             title: "others",

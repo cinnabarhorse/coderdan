@@ -5,6 +5,7 @@ import Layout from "./reusable/Layout";
 import NextStyledInput from '../components/reusable/NextStyledInput'
 import NextMultiLineInput from '../components/reusable/NextMultiLineInput'
 import NextStyledButton from "./reusable/NextStyledButton";
+import { boxShadow, themeSecondary } from "../theme";
 
 //import SibApiV3Sdk from 'sib-api-v3-typescript'
 interface HireMePageProps {
@@ -17,6 +18,8 @@ const HireMePage = (props: HireMePageProps) => {
     const [name, setName] = useState<string>("hello")
     const [subject, setSubject] = useState("Email from CoderDannn Site")
     const [message, setMessage] = useState<string>("hey!")
+
+    const [submitting, setSubmitting] = useState(false)
 
     const inputFieldStyle = `
         height:50px;
@@ -31,9 +34,12 @@ const HireMePage = (props: HireMePageProps) => {
     border:solid 1px black;
     font-size:20px;
     font-weight:300;
+    color:black;
 `
 
     async function sendEmail() {
+
+
 
         if (email === undefined || email === "") {
             alert("Please enter your email")
@@ -47,6 +53,10 @@ const HireMePage = (props: HireMePageProps) => {
             alert("Please enter a message")
             return
         }
+
+        setSubmitting(true)
+
+        const key = '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'
 
         const params = {
             sender: {
@@ -64,14 +74,35 @@ const HireMePage = (props: HireMePageProps) => {
         try {
 
 
+            const result = await fetch("https://api.sendinblue.com/v3/smtp/email", {
+                body: JSON.stringify(params),
+                headers: {
+                    "Accept": "application/json",
+                    "Api-Key": key,
+                    "Content-Type": "application/json"
+                },
+                method: "POST"
+            })
+
+            const json = await result.json()
+
+            console.log('json:', json)
+
+            setSubmitting(false)
+
+            alert("Message sent!")
 
 
+            //console.log('result:', result)
         } catch (error) {
+            setSubmitting(false)
             console.log('error:', error)
+            alert("Error sending message!")
+
         }
 
 
-        alert("Message sent!")
+
 
 
 
@@ -104,6 +135,7 @@ const HireMePage = (props: HireMePageProps) => {
                             width:100%;
                             height:100%;
                             padding:30px;
+                            border-radius:5px;
                         }
 
                         .aboutMe {
@@ -116,6 +148,12 @@ const HireMePage = (props: HireMePageProps) => {
                             font-size:24px;
                             font-weight:300;
                             margin-bottom:25px;
+                        }
+
+                        @media screen and (max-width:768px) {
+                            .aboutMeContainer {
+                                margin-top:20px;
+                            }
                         }
                     `}
                 </style>
@@ -184,12 +222,28 @@ const HireMePage = (props: HireMePageProps) => {
                                 width:100%;
                                 height:65px;
                                 background:#C99D66;
+                                box-shadow:none;
+                                transition:background .5s;
+                             
+                            `}
+                            hoverStyle={`
+                                background:${themeSecondary};
+                                box-shadow:${boxShadow};
                             `}
                             titleStyles={`
                                 font-size:20px;
                                 font-weight:300;
                                 color:white;
                             `}
+                            submitting={submitting}
+                            submittingTitle="sending..."
+                            // submittingStyle={`
+                            //     background:rgba(201,157,102,0.6);
+                            // `}
+                            disabledStyle={`
+                                background:rgba(201,157,102,0.6);
+                            `}
+                            disabled={submitting}
                         />
                     </Col>
 

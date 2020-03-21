@@ -1,5 +1,5 @@
 import React from 'react'
-import { themeColor, themeCyan } from '../../theme'
+import { themeColor, themeCyan, themeSecondary } from '../../theme'
 import Link from 'next/link'
 import { rightLinks } from './links'
 
@@ -45,8 +45,21 @@ const NextStyledNavBar = (props: Props) => {
 
                     return (
                         <div className="linkButton">
+
+                            <style jsx>
+                                {`
+                                   .linkButtonSpecial {
+                                       color:${linkObject.highlight ? themeColor : undefined};
+                                   }
+                                   .linkButtonSpecial:hover {
+                                       color:${linkObject.highlight ? themeSecondary : undefined};
+                                   }
+                                    
+                                `}
+                            </style>
+
                             <Link key={linkObject.href} href={linkObject.href}>
-                                <a href={linkObject.href}>{linkObject.name}</a>
+                                <a className="linkButtonSpecial" href={linkObject.href}>{linkObject.name}</a>
                             </Link>
                         </div>
 
@@ -180,10 +193,7 @@ const NextStyledNavBar = (props: Props) => {
                     width:65px;
                     margin-left: 10px;
                     margin-right:10px;
-                   
                     font-size: 16px;
-
-                    color: ${themeColor};
                     border: none;
                
                     display: flex;
@@ -195,7 +205,7 @@ const NextStyledNavBar = (props: Props) => {
 
                 .linkButton:hover {
 
-                    color:${themeCyan};
+                    color:${themeColor};
                     text-decoration: none;
                     color: white !important;
                 }
