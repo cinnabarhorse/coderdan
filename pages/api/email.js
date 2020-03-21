@@ -35,7 +35,9 @@ export default ({ query: { id } }, res) => {
     };
 
     apiInstance.sendTransacEmail(sendSmtpEmail).then(function (data) {
+
         console.log('API called successfully. Returned data: ' + data);
+        res.status(200).json(data)
     }, function (error) {
         console.error(error);
     });
