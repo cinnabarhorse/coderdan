@@ -7,9 +7,11 @@ export default ({ query: { id } }, res) => {
 
     console.log('client:', defaultClient)
 
+    const key = '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'
+
     // Configure API key authorization: api-key
     var apiKey = defaultClient.authentications['api-key'];
-    apiKey.apiKey = 'YOUR_API_KEY';
+    apiKey.apiKey = key;
 
     // Uncomment below two lines to configure authorization using: partner-key
     // var partnerKey = defaultClient.authentications['partner-key'];
@@ -48,7 +50,7 @@ export default ({ query: { id } }, res) => {
   
       // This example is for Typescript-node
   
-      const key = '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'
+      
   
   
       // This example is for Typescript-node
