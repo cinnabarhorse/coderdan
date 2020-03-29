@@ -42,7 +42,7 @@ const Home = () => {
             iconSize={44}
             twitter="https://twitter.com/coderdannn"
             medium="https://medium.com/@coderdannn"
-            dev="https://dev.to/coderdannn"
+            dev="https://dev.to/coderdan"
           />
         </div>
 
