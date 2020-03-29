@@ -7,7 +7,6 @@ import NextMultiLineInput from '../components/reusable/NextMultiLineInput'
 import NextStyledButton from "./reusable/NextStyledButton";
 import { boxShadow, themeSecondary } from "../theme";
 
-//import SibApiV3Sdk from 'sib-api-v3-typescript'
 interface HireMePageProps {
 
 }
@@ -63,10 +62,10 @@ const HireMePage = (props: HireMePageProps) => {
                 name: name,
                 email: email
             },
-            to: {
+            to: [{
                 email: "dmathieuva@gmail.com",
                 name: "Coder Dan"
-            },
+            }],
             subject: "Test email",
             htmlContent: message
         }

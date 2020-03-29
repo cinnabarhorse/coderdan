@@ -31,11 +31,11 @@ export var rightLinks = [
         href: "#skills",
     },
 
-
     {
-        name: "token",
-        href: "#token",
+        name: "blog",
+        href: "https://blog.coderdan.dev"
     },
+
     {
         name: "hire me",
         href: "#hire",

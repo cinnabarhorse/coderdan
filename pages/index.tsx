@@ -15,9 +15,9 @@ const Home = () => {
 
   return (
 
-    <Container>
+    <div>
       <Head>
-        <title>coder dan (web3 developer)</title>
+        <title>coderdan (web3 developer)</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -73,12 +73,13 @@ const Home = () => {
         </div>
 
 
-        <div style={{ position: 'relative', top: 100 }} id="token"></div>
+        {/*}   <div style={{ position: 'relative', top: 100 }} id="token"></div>
 
         <div>
           <TokenPage />
         </div>
 
+  {*/}
 
 
         <div style={{ position: 'relative', top: 100 }} id="hire"></div>
@@ -113,6 +114,9 @@ const Home = () => {
         width:100%;
         height:200px;
         margin-bottom:25px;
+      }
+
+      .imageContainer:hover {
 
       }
 
@@ -148,6 +152,7 @@ const Home = () => {
 
      
       .description {
+      
         font-size:32px;
         font-weight:300;
         text-align: center;
@@ -209,7 +214,7 @@ const Home = () => {
     `}</style>
 
       </Layout>
-    </Container>
+    </div>
 
   )
 }

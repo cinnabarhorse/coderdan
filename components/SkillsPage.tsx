@@ -41,11 +41,12 @@ const SkillsPage = (props: SkillsPageProps) => {
     ]
 
     return (
-        <Container>
-            <Layout>
+        <div>
+            <Container>
+                <Layout>
 
-                <style jsx>
-                    {`
+                    <style jsx>
+                        {`
                         .container {
                             padding:0;
                             display:flex;
@@ -87,50 +88,51 @@ const SkillsPage = (props: SkillsPageProps) => {
                         }
 
                     `}
-                </style>
+                    </style>
 
 
-                <Row>
-                    <Col>
-                        <PageTitle title="skills" />
-                    </Col>
+                    <Row>
+                        <Col>
+                            <PageTitle title="skills" />
+                        </Col>
 
-                </Row>
+                    </Row>
 
-                <Row>
+                    <Row>
 
-                    <Col>
+                        <Col>
 
-                        {skills.map((skill) => {
-                            return (
-                                <div className="container">
+                            {skills.map((skill) => {
+                                return (
+                                    <div className="container">
 
-                                    <div className="title">
-                                        {skill.title}
+                                        <div className="title">
+                                            {skill.title}
+                                        </div>
+
+                                        <div className="itemContainer">
+                                            {skill.items.map((item) => {
+                                                return (
+                                                    <div className="item">
+                                                        <span className="itemBox">
+                                                        </span> <span className="itemName">
+                                                            {item} </span>
+                                                    </div>
+                                                )
+                                            })}
+
+                                        </div>
+
+
                                     </div>
+                                )
+                            })}
+                        </Col>
 
-                                    <div className="itemContainer">
-                                        {skill.items.map((item) => {
-                                            return (
-                                                <div className="item">
-                                                    <span className="itemBox">
-                                                    </span> <span className="itemName">
-                                                        {item} </span>
-                                                </div>
-                                            )
-                                        })}
-
-                                    </div>
-
-
-                                </div>
-                            )
-                        })}
-                    </Col>
-
-                </Row>
-            </Layout>
-        </Container>
+                    </Row>
+                </Layout>
+            </Container>
+        </div>
     );
 }
 export default SkillsPage;

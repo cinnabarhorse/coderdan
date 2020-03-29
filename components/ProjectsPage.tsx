@@ -10,41 +10,42 @@ interface ProjectsPageProps {
 
 const ProjectsPage = (props: ProjectsPageProps) => {
     return (
-        <Container>
-            <Layout>
+        <div>
+            <Container>
+                <Layout>
 
 
-                <Row>
-                    <Col>
-                        <PageTitle id="projects" title="projects" />
-                    </Col>
+                    <Row>
+                        <Col>
+                            <PageTitle id="projects" title="projects" />
+                        </Col>
 
 
-                </Row>
+                    </Row>
 
-                <Row>
+                    <Row>
 
-                    <Col>
+                        <Col>
 
-                        <ProjectInfo
-                            name="bullionix.io"
-                            url="https://bullionix.io"
-                            description="Purchase and mint gold-backed NFTs. 
+                            <ProjectInfo
+                                name="bullionix.io"
+                                url="https://bullionix.io"
+                                description="Purchase and mint gold-backed NFTs. 
                 Powered by Digix (DGX) and Ethereum."
-                            twitter="https://twitter.com/bullionix_io"
-                            github="https://github.com/bullionix"
-                            medium=""
-                            thumbnail="/bullionix_thumbnail.png"
-                            profilePic="/bullionix_profile.png"
+                                twitter="https://twitter.com/bullionix_io"
+                                github="https://github.com/bullionix"
+                                medium=""
+                                thumbnail="/bullionix_thumbnail.png"
+                                profilePic="/bullionix_profile.png"
 
-                        />
-                    </Col>
+                            />
+                        </Col>
 
-                </Row>
-            </Layout>
-        </Container>
+                    </Row>
+                </Layout>
+            </Container>
 
-
+        </div>
     );
 }
 export default ProjectsPage;
