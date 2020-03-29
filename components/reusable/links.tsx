@@ -8,7 +8,7 @@ var moreLinkObject = [
     },
     {
         name: "Blog",
-        href: "https://medium.com/@bullionix",
+        href: "https://dev.to/coderdan",
 
     },
     {
