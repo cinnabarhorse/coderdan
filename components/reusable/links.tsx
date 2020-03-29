@@ -1,24 +1,3 @@
-
-var moreLinkObject = [
-
-    {
-        name: "Get DGX",
-        href: "https://digix.global",
-
-    },
-    {
-        name: "Blog",
-        href: "https://dev.to/coderdan",
-
-    },
-    {
-        name: "About",
-        href: "/about",
-
-    },
-
-]
-
 export var rightLinks = [
 
     {
@@ -33,7 +12,7 @@ export var rightLinks = [
 
     {
         name: "blog",
-        href: "https://blog.coderdan.dev"
+        href: "https://dev.to/coderdan"
     },
 
     {
