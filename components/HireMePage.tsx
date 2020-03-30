@@ -63,10 +63,10 @@ const HireMePage = (props: HireMePageProps) => {
                 email: email
             },
             to: [{
-                email: "dmathieuva@gmail.com",
+                email: "coderdannn@gmail.com",
                 name: "Coder Dan"
             }],
-            subject: "Test email",
+            subject: "Inquiry from Coderdan.dev",
             htmlContent: message
         }
 
