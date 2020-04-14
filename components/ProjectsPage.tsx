@@ -47,7 +47,7 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                                 url="https://mintbase-auth.now.sh"
                                 description="Demo for DappCon 2020 conference. Use NFTs to vote on your favorite speakers."
                                 twitter="https://twitter.com/mintbase"
-                                // github="https://github.com/bullionix"
+                                github="https://github.com/cinnabarhorse/mintbase-auth"
                                 //  medium=""
                                 thumbnail="/mintbaseauth.jpg"
                                 profilePic="/mintbasepic.jpg"
