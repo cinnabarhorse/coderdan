@@ -7,9 +7,9 @@ interface ProjectInfoProps {
     url: string
     name: string
     description: string
-    twitter: string
-    github: string
-    medium: string
+    twitter?: string
+    github?: string
+    medium?: string
     thumbnail: string
 }
 
@@ -23,13 +23,12 @@ const ProjectInfo = (props: ProjectInfoProps) => {
                 {`
                 .profileContainer {
                     display:flex;
-                    width:65px;
+                  
                     height:65px;
                     flex:1;
                     flex-direction:row;
                     align-items:center;
-                    background:#F9F9F9;
-                    border-radius:32.5px;
+                  
                 }
                 .profilePic {
                     width:65px;
@@ -82,9 +81,9 @@ const ProjectInfo = (props: ProjectInfoProps) => {
                 <div style={{ marginTop: 20 }}>
                     <SocialIcon
                         iconSize={44}
-                        twitter="https://twitter.com/bullionix_io"
-                        github="https://github.com/Bullionix/Bullionix_phase1"
-                        medium="https://medium.com/"
+                        twitter={twitter}
+                        github={github}
+                        medium={medium}
 
                     />
                 </div>

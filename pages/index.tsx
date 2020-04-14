@@ -8,6 +8,7 @@ import TokenPage from '../components/TokenPage'
 import HireMePage from '../components/HireMePage'
 import { themeColor } from '../theme'
 import { useState } from 'react'
+import PraisePage from '../components/PraisePage'
 
 const Home = () => {
 
@@ -71,6 +72,14 @@ const Home = () => {
         <div>
           <SkillsPage />
         </div>
+
+
+        <div style={{ position: 'relative', top: 100 }} id="praise"></div>
+
+        <div>
+          <PraisePage />
+        </div>
+
 
 
         {/*}   <div style={{ position: 'relative', top: 100 }} id="token"></div>

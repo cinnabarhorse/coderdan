@@ -11,9 +11,15 @@ export var rightLinks = [
     },
 
     {
-        name: "blog",
-        href: "https://dev.to/coderdan"
+        name: "praise",
+        href: "#praise"
     },
+
+    /* {
+         name: "blog",
+         href: "https://dev.to/coderdan"
+     },
+     */
 
     {
         name: "hire me",

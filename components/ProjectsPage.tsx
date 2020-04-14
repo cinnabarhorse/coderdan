@@ -34,9 +34,23 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                 Powered by Digix (DGX) and Ethereum."
                                 twitter="https://twitter.com/bullionix_io"
                                 github="https://github.com/bullionix"
-                                medium=""
+                                // medium=""
                                 thumbnail="/bullionix_thumbnail.png"
                                 profilePic="/bullionix_profile.png"
+
+                            />
+
+                            <div style={{ height: 40 }}></div>
+
+                            <ProjectInfo
+                                name="Mintbase NFT Demo"
+                                url="https://mintbase-auth.now.sh"
+                                description="Demo for DappCon 2020 conference. Use NFTs to vote on your favorite speakers."
+                                twitter="https://twitter.com/mintbase"
+                                // github="https://github.com/bullionix"
+                                //  medium=""
+                                thumbnail="/mintbaseauth.jpg"
+                                profilePic="/mintbasepic.jpg"
 
                             />
                         </Col>
