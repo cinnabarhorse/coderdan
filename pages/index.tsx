@@ -97,13 +97,9 @@ const Home = () => {
         </div>
 
         <footer>
-          <a
-            href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+         
             Copyright 2019-2020 Daniel Mathieu
-        </a>
+       
         </footer>
 
         <style jsx>{`
