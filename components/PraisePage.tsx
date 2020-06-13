@@ -112,6 +112,14 @@ const PraisePage = (props: PraisePage) => {
                             />
                         </Col>
 
+                        <Col xl={6} lg={6} md={6} sm={12} xs={12}>
+
+                            <TwitterTweetEmbed tweetId="1260926367438422016"
+                            />
+                        </Col>
+
+
+
 
 
 

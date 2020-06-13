@@ -53,6 +53,20 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                                 profilePic="/mintbasepic.jpg"
 
                             />
+
+                            <div style={{ height: 40 }}></div>
+
+                            <ProjectInfo
+                                name="YieldHero"
+                                url="https://yieldhero.app"
+                                description="One-stop suite for managing your Aave yield. Won second prize in ETHGlobal's HackMoney Aave challenge."
+                                twitter="https://twitter.com/yieldhero"
+                                github="https://github.com/cinnabarhorse/yieldhero"
+                                //  medium=""
+                                thumbnail="/yieldhero.jpg"
+                                profilePic="/yieldherologo.png"
+
+                            />
                         </Col>
 
                     </Row>

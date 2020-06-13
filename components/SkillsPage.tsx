@@ -10,10 +10,16 @@ interface SkillsPageProps {
 const SkillsPage = (props: SkillsPageProps) => {
 
     const skills = [
+
         {
-            title: "languages",
+            title: "natural languages",
             icon: "",
-            items: ["English", "Mandarin", "Javascript", "TypeScript", "CSS", "HTML"]
+            items: ["English (Fluent)", "Mandarin (Fluent)"]
+        },
+        {
+            title: "computer languages",
+            icon: "",
+            items: ["Javascript", "TypeScript", "Solidity", "CSS", "HTML"]
         },
         {
             title: "databases",
@@ -28,12 +34,12 @@ const SkillsPage = (props: SkillsPageProps) => {
         {
             title: "web3",
             icon: "",
-            items: ["web3.js", "ethers.js", "Ganache", "Remix", "Metamask", "BlockNative"]
+            items: ["web3.js", "ethers.js", "TheGraph", "BlockNative"]
         },
         {
             title: "others",
             icon: "",
-            items: ["ThreeJS", "GraphQL", "REST", "Git, Photoshop", "Illustrator"]
+            items: ["ThreeJS", "GraphQL", "REST", "Git, Photoshop", "Figma"]
         },
 
 
