@@ -14,7 +14,7 @@ const SkillsPage = (props: SkillsPageProps) => {
         {
             title: "natural languages",
             icon: "",
-            items: ["English (Fluent)", "Mandarin (Fluent)"]
+            items: ["English (Native)", "Mandarin (Fluent)"]
         },
         {
             title: "computer languages",
