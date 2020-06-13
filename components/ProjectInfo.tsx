@@ -11,11 +11,12 @@ interface ProjectInfoProps {
     github?: string
     medium?: string
     thumbnail: string
+    skills: string
 }
 
 const ProjectInfo = (props: ProjectInfoProps) => {
 
-    const { profilePic, url, name, description, twitter, github, medium, thumbnail } = props
+    const { profilePic, url, name, description, twitter, github, medium, thumbnail, skills } = props
     return (
         <Row>
 
@@ -48,6 +49,12 @@ const ProjectInfo = (props: ProjectInfoProps) => {
                     font-weight:300;
                 }
 
+                .skillsUsed {
+                    margin-top:10px;
+                    font-size:14px;
+                   
+                }
+
                 .thumbnailContainer {
                     width:100%;
                     height:auto;
@@ -76,6 +83,10 @@ const ProjectInfo = (props: ProjectInfoProps) => {
 
                 <div className="description">
                     {description}
+                </div>
+
+                <div className="skillsUsed">
+                    <strong>Skills used: </strong> {skills}
                 </div>
 
                 <div style={{ marginTop: 20 }}>

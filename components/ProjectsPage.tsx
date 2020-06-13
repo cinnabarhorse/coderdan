@@ -37,6 +37,7 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                                 // medium=""
                                 thumbnail="/bullionix_thumbnail.png"
                                 profilePic="/bullionix_profile.png"
+                                skills="Solidity, Web3, NextJS, AWS"
 
                             />
 
@@ -51,6 +52,7 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                                 //  medium=""
                                 thumbnail="/mintbaseauth.jpg"
                                 profilePic="/mintbasepic.jpg"
+                                skills="Web3, TheGraph, NextJS, Firebase"
 
                             />
 
@@ -65,6 +67,7 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                                 //  medium=""
                                 thumbnail="/yieldhero.jpg"
                                 profilePic="/yieldherologo.png"
+                                skills="Web3, TheGraph, NextJS, Firebase"
 
                             />
                         </Col>
