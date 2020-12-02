@@ -18,7 +18,7 @@ const ProjectInfo = (props: ProjectInfoProps) => {
 
     const { profilePic, url, name, description, twitter, github, medium, thumbnail, skills } = props
     return (
-        <Row>
+        <Row style={{ marginTop: 30, marginBottom: 15, paddingBottom: 15, borderBottom: "solid 1px whitesmoke" }}>
 
             <style jsx>
                 {`

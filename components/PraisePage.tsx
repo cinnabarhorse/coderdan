@@ -10,37 +10,6 @@ interface PraisePage {
 
 const PraisePage = (props: PraisePage) => {
 
-    const praise = [
-        {
-            from: "Jesse",
-            href: "",
-            text: ["English", "Mandarin", "Javascript", "TypeScript", "CSS", "HTML"]
-        },
-        {
-            title: "databases",
-            icon: "",
-            items: ["Firebase RTDB", "MySQL", "DynamoDB"]
-        },
-        {
-            title: "frameworks",
-            icon: "",
-            items: ["ReactJS", "NextJS", "React Native", "Redux", "AWS", "Firebase"]
-        },
-        {
-            title: "web3",
-            icon: "",
-            items: ["web3.js", "ethers.js", "Ganache", "Remix", "Metamask", "BlockNative"]
-        },
-        {
-            title: "others",
-            icon: "",
-            items: ["ThreeJS", "GraphQL", "REST", "Git, Photoshop", "Illustrator"]
-        },
-
-
-
-    ]
-
     return (
         <div>
             <Container>

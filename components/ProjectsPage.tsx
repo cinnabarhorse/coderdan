@@ -28,7 +28,34 @@ const ProjectsPage = (props: ProjectsPageProps) => {
                         <Col>
 
                             <ProjectInfo
-                                name="bullionix.io"
+                                name="Aavegotchi"
+                                url="https://aavegotchi.com"
+                                description="DeFi-Staked playable crypto collectibles, Powered by Aave and Ethereum."
+                                twitter="https://twitter.com/aavegotchi"
+                                github="https://github.com/aavegotchi"
+                                medium="https://aavegotchi.medium.com"
+                                thumbnail="/aavegotchicurve.png"
+                                profilePic="/aavegotchi.png"
+                                skills="Solidity, Web3, NextJS, Firebase"
+
+                            />
+
+
+                            <ProjectInfo
+                                name="Aavegotchi Wiki"
+                                url="https://wiki.aavegotchi.com"
+                                description="The Open-source Wiki of Aavegotchi"
+                                twitter="https://twitter.com/aavegotchi"
+                                github="https://github.com/aavegotchi/aavegotchi-wiki"
+                                // medium=""
+                                thumbnail="/aavegotchiwiki.png"
+                                profilePic="/aavegotchiwiki.svg"
+                                skills="NextJS, Github"
+
+                            />
+
+                            <ProjectInfo
+                                name="Bullionix"
                                 url="https://bullionix.io"
                                 description="Purchase and mint gold-backed NFTs. 
                 Powered by Digix (DGX) and Ethereum."

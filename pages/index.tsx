@@ -26,7 +26,7 @@ const Home = () => {
 
 
         <div className="imageContainer">
-          <img className="profileImage" src="coderdan.jpg" />
+          <img className="profileImage" src="coderdan.png" />
         </div>
 
         <div className="description">
