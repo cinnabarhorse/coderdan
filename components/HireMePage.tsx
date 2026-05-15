@@ -15,7 +15,6 @@ const HireMePage = (props: HireMePageProps) => {
 
     const [email, setEmail] = useState<string>("")
     const [name, setName] = useState<string>("")
-    const [subject, setSubject] = useState("Hi Coder Dan")
     const [message, setMessage] = useState<string>("")
 
     const [submitting, setSubmitting] = useState(false)
@@ -55,29 +54,19 @@ const HireMePage = (props: HireMePageProps) => {
 
         setSubmitting(true)
 
-        const key = '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'
-
         const params = {
-            sender: {
-                name: name,
-                email: email
-            },
-            to: [{
-                email: "coderdannn@gmail.com",
-                name: "Coder Dan"
-            }],
-            subject: "Inquiry from Coderdan.dev",
-            htmlContent: message
+            email,
+            name,
+            message
         }
 
         try {
 
 
-            const result = await fetch("https://api.sendinblue.com/v3/smtp/email", {
+            const result = await fetch("/api/email", {
                 body: JSON.stringify(params),
                 headers: {
                     "Accept": "application/json",
-                    "Api-Key": key,
                     "Content-Type": "application/json"
                 },
                 method: "POST"
@@ -85,7 +74,9 @@ const HireMePage = (props: HireMePageProps) => {
 
             const json = await result.json()
 
-            console.log('json:', json)
+            if (!result.ok) {
+                throw new Error(json.message || "Error sending message")
+            }
 
             setSubmitting(false)
 

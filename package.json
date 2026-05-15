@@ -8,20 +8,20 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.27",
-    "@fortawesome/free-brands-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.9",
-    "bootstrap": "^4.4.1",
-    "next": "9.3.1",
-    "react": "16.13.1",
-    "react-bootstrap": "^1.0.0-beta.17",
-    "react-dom": "16.13.1",
-    "react-twitter-embed": "^3.0.3",
-    "sib-api-v3-sdk": "^7.1.4",
-    "sib-api-v3-typescript": "^1.0.0"
+    "@fortawesome/fontawesome-svg-core": "^7.2.0",
+    "@fortawesome/free-brands-svg-icons": "^7.2.0",
+    "@fortawesome/react-fontawesome": "^3.3.1",
+    "bootstrap": "^5.3.8",
+    "next": "16.2.6",
+    "react": "19.2.6",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "19.2.6",
+    "react-twitter-embed": "^4.0.4"
   },
   "devDependencies": {
-    "@types/node": "^13.9.2",
-    "typescript": "^3.8.3"
+    "@types/node": "^25.0.0",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "typescript": "^5.9.3"
   }
 }

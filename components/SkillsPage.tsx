@@ -110,7 +110,7 @@ const SkillsPage = (props: SkillsPageProps) => {
 
                             {skills.map((skill) => {
                                 return (
-                                    <div className="container">
+                                    <div key={skill.title} className="container">
 
                                         <div className="title">
                                             {skill.title}
@@ -119,7 +119,7 @@ const SkillsPage = (props: SkillsPageProps) => {
                                         <div className="itemContainer">
                                             {skill.items.map((item) => {
                                                 return (
-                                                    <div className="item">
+                                                    <div key={item} className="item">
                                                         <span className="itemBox">
                                                         </span> <span className="itemName">
                                                             {item} </span>
