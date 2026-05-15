@@ -6,8 +6,8 @@ interface Props {
     inputType?: "text" | "password"
     inputLabel?: string | undefined
     placeHolderText: string
-    buttonTitle?: string | JSX.Element
-    buttonSubmittingTitle?: string | JSX.Element
+    buttonTitle?: React.ReactNode
+    buttonSubmittingTitle?: React.ReactNode
     buttonStyles?: any
 
     errorText?: string | undefined

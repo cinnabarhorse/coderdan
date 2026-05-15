@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 interface LinkObject {
-    name: string | JSX.Element
+    name: React.ReactNode
     href: string
     as?: string | undefined
     action?: () => void
@@ -13,7 +13,7 @@ type OpenSide = "left" | "right"
 
 interface Props {
     href?: string
-    parentButtonContent: string | JSX.Element
+    parentButtonContent: React.ReactNode
     items: LinkObject[] | undefined
     parentButtonHeight: number
     parentButtonWidth: number
@@ -29,7 +29,8 @@ interface Props {
 
 const NextStyledDropdown = (props: Props) => {
 
-    const { parentButtonContent, items, parentButtonHeight, parentButtonWidth, parentButtonStyle, parentButtonHoverStyle, openSide, childButtonHeight, childButtonWidth, childButtonStyle, childHoverButtonStyle } = props
+    const { parentButtonContent, parentButtonHeight, parentButtonWidth, parentButtonStyle, parentButtonHoverStyle, openSide, childButtonHeight, childButtonWidth, childButtonStyle, childHoverButtonStyle } = props
+    const items = props.items || []
 
     const [changeItems, setChangeItems] = useState([])
     const [hovering, setHovering] = useState(false)
@@ -113,7 +114,7 @@ const NextStyledDropdown = (props: Props) => {
                 className="parentButtonContainer"
 
             >
-                <Link href={items.length === 0 ? props.href : ""}>
+                <Link legacyBehavior href={items.length === 0 ? props.href : ""}>
 
                     <a
                         className="parentButton"
@@ -153,7 +154,7 @@ const NextStyledDropdown = (props: Props) => {
                                 )
                             }
                             else return (
-                                <Link key={index} href={item.href} as={item.as ? item.as : undefined}>
+                                <Link legacyBehavior key={index} href={item.href} as={item.as ? item.as : undefined}>
                                     <a
                                         className="childButton"
                                         onMouseOver={() => updateHoverStatus(index, true)}

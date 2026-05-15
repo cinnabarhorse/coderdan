@@ -70,8 +70,8 @@ const Footer = (props: FooterProps) => {
                     <Col style={{ marginBottom: 20 }} xl={2} lg={2} md={12} sm={12} xs={12}>
                         <h4>Company</h4>
 
-                        <div><Link href="/about"><a>About</a></Link></div>
-                        <div><Link href="/press"><a>Press</a></Link></div>
+                        <div><Link legacyBehavior href="/about"><a>About</a></Link></div>
+                        <div><Link legacyBehavior href="/press"><a>Press</a></Link></div>
                         <div><a href="#">Contact </a></div>
                         {/*}   <div><a href="#">FAQ</a></div> {*/}
 

@@ -7,7 +7,7 @@ import { rightLinks } from './links'
 import { Container } from 'react-bootstrap'
 
 interface Props {
-    logo?: JSX.Element
+    logo?: React.ReactNode
     siteTitle?: string
 }
 
@@ -18,7 +18,7 @@ const NextStyledNavBar = (props: Props) => {
 
     const brand = (
         <div className="brandContainer">
-            <Link href="/">
+            <Link legacyBehavior href="/">
                 <a className="brand">
                     <div className="logoImage">
 
@@ -44,7 +44,7 @@ const NextStyledNavBar = (props: Props) => {
                 linkArray.map(linkObject => {
 
                     return (
-                        <div className="linkButton">
+                        <div key={linkObject.href} className="linkButton">
 
                             <style jsx>
                                 {`
@@ -58,8 +58,8 @@ const NextStyledNavBar = (props: Props) => {
                                 `}
                             </style>
 
-                            <Link key={linkObject.href} href={linkObject.href}>
-                                <a className="linkButtonSpecial" href={linkObject.href}>{linkObject.name}</a>
+                            <Link legacyBehavior href={linkObject.href}>
+                                <a className="linkButtonSpecial">{linkObject.name}</a>
                             </Link>
                         </div>
 
