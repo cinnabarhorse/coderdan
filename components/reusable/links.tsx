@@ -2,17 +2,22 @@ export var rightLinks = [
 
     {
         name: "projects",
-        href: "#projects",
+        href: "/#projects",
     },
 
     {
         name: "skills",
-        href: "#skills",
+        href: "/#skills",
     },
 
     {
         name: "praise",
-        href: "#praise"
+        href: "/#praise"
+    },
+
+    {
+        name: "now",
+        href: "/now"
     },
 
     /* {
@@ -23,7 +28,7 @@ export var rightLinks = [
 
     {
         name: "hire me",
-        href: "#hire",
+        href: "/#hire",
         highlight: true
     },
 
