@@ -1,14 +1,9 @@
 import Head from 'next/head'
-import { Container } from 'react-bootstrap'
 import Layout from '../components/reusable/Layout'
 import SocialIcon from '../components/socialIcons'
 import ProjectsPage from '../components/ProjectsPage'
-import SkillsPage from '../components/SkillsPage'
-import TokenPage from '../components/TokenPage'
-import HireMePage from '../components/HireMePage'
 import { themeColor } from '../theme'
 import { useState } from 'react'
-import PraisePage from '../components/PraisePage'
 
 const Home = () => {
 
@@ -34,7 +29,7 @@ const Home = () => {
         </div>
 
         <div className="subtitle">
-          i make awesome web3 experiences
+          Building tools that expand human agency and sovereignty.
         </div>
 
 
@@ -66,40 +61,8 @@ const Home = () => {
           <ProjectsPage />
         </div>
 
-
-        <div style={{ position: 'relative', top: 100 }} id="skills"></div>
-
-        <div>
-          <SkillsPage />
-        </div>
-
-
-        <div style={{ position: 'relative', top: 100 }} id="praise"></div>
-
-        <div>
-          <PraisePage />
-        </div>
-
-
-
-        {/*}   <div style={{ position: 'relative', top: 100 }} id="token"></div>
-
-        <div>
-          <TokenPage />
-        </div>
-
-  {*/}
-
-
-        <div style={{ position: 'relative', top: 100 }} id="hire"></div>
-        <div>
-          <HireMePage />
-        </div>
-
         <footer>
-         
-            Copyright 2019-2020 Daniel Mathieu
-       
+          Copyright 2026
         </footer>
 
         <style jsx>{`
