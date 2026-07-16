@@ -1,31 +1,25 @@
-import React from 'react'
-import App from 'next/app'
-import NextStyledNavBar from '../components/reusable/NextStyledNavBar'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import '../fonts.css'
+import type { AppProps } from 'next/app'
+import { Geist, Geist_Mono } from 'next/font/google'
+import SiteFooter from '../components/SiteFooter'
+import SiteHeader from '../components/SiteHeader'
+import '../styles/globals.css'
 
+const geist = Geist({
+  subsets: ['latin'],
+  variable: '--font-sans',
+})
 
-class MyApp extends App {
+const geistMono = Geist_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+})
 
-
-
-    render() {
-        const { Component, pageProps } = this.props
-
-
-
-        return (
-
-            <div>
-
-                <NextStyledNavBar />
-                <Component {...pageProps} />
-
-            </div>
-
-
-        )
-    }
+export default function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <div className={`app-root ${geist.variable} ${geistMono.variable}`}>
+      <SiteHeader />
+      <Component {...pageProps} />
+      <SiteFooter />
+    </div>
+  )
 }
-
-export default MyApp
