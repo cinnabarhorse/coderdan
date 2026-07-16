@@ -1,18 +1,8 @@
-export var rightLinks = [
+export const rightLinks = [
 
     {
         name: "projects",
         href: "/#projects",
-    },
-
-    {
-        name: "skills",
-        href: "/#skills",
-    },
-
-    {
-        name: "praise",
-        href: "/#praise"
     },
 
     {
@@ -24,12 +14,6 @@ export var rightLinks = [
          name: "blog",
          href: "https://dev.to/coderdan"
      },
-     */
-
-    {
-        name: "hire me",
-        href: "/#hire",
-        highlight: true
-    },
+    */
 
 ]
