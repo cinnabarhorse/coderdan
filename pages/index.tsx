@@ -29,7 +29,7 @@ const Home = () => {
         </div>
 
         <div className="subtitle">
-          Building tools that expand human agency and sovereignty.
+          I build tools that expand human agency and sovereignty.
         </div>
 
 
