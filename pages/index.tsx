@@ -37,8 +37,10 @@ const Home = () => {
           <div className="hero-copy">
             <p className="hero-kicker">Independent builder</p>
             <h1>
-              <span>I build tools that expand</span>
-              <span>human agency and sovereignty.</span>
+              <span>I build tools that expand</span>{' '}
+              <span>
+                <em>human agency and sovereignty.</em>
+              </span>
             </h1>
             <p className="hero-intro">
               Practical systems that help people and communities act with more
@@ -54,16 +56,27 @@ const Home = () => {
             </div>
           </div>
 
-          <figure className="hero-visual">
-            <Image
-              src="/agency-workbench.webp"
-              alt="Hands assembling an open electronic device at a workbench"
-              fill
-              priority
-              fetchPriority="high"
-              sizes="(max-width: 767px) 100vw, 42vw"
-            />
-          </figure>
+          <div className="hero-system">
+            <figure className="hero-visual">
+              <Image
+                src="/coderdan.png"
+                alt="Coder Dan with a llama, both wearing glasses"
+                fill
+                priority
+                fetchPriority="high"
+                sizes="(max-width: 767px) 82vw, 42vw"
+              />
+            </figure>
+            <span className="system-label system-label-a" aria-hidden="true">
+              Ownership
+            </span>
+            <span className="system-label system-label-b" aria-hidden="true">
+              Capability
+            </span>
+            <span className="system-label system-label-c" aria-hidden="true">
+              Coordination
+            </span>
+          </div>
         </section>
 
         <ProjectArchive />
@@ -105,8 +118,8 @@ const Home = () => {
         <section className="now-preview section-shell reveal">
           <figure className="now-portrait">
             <Image
-              src="/coderdan.png"
-              alt="Coder Dan with a llama, both wearing glasses"
+              src="/agency-workbench.webp"
+              alt="Hands assembling an open electronic device at a workbench"
               fill
               sizes="(max-width: 767px) 76vw, 28vw"
             />
