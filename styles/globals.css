@@ -63,6 +63,7 @@ body {
   font-family: var(--font-sans), sans-serif;
   isolation: isolate;
   min-height: 100dvh;
+  overflow-x: clip;
   position: relative;
 }
 
@@ -749,6 +750,10 @@ img {
   margin-top: -52px;
 }
 
+.now-item:nth-child(5) {
+  grid-column: 3 / span 8;
+}
+
 .now-item h2 {
   font-size: clamp(28px, 3.2vw, 46px);
   font-weight: 620;
@@ -1057,7 +1062,8 @@ img {
   .now-item,
   .now-item:nth-child(1),
   .now-item:nth-child(2),
-  .now-item:nth-child(4) {
+  .now-item:nth-child(4),
+  .now-item:nth-child(5) {
     margin-top: 0;
     padding-top: 22px;
   }

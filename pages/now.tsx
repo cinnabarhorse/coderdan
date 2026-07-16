@@ -18,6 +18,10 @@ const nowItems = [
     title: 'Helping Aavegotchi become DAO-led',
     body: 'I am helping Aavegotchi transition from a single-studio model to a DAO-led model, with more responsibility, coordination, and execution distributed across the community.',
   },
+  {
+    title: 'Building for human agency in the AI era',
+    body: 'I am building tools to help expand human agency and sovereignty in the AI era, so people and communities can benefit from increasingly capable systems without surrendering ownership, judgment, or control.',
+  },
 ]
 
 const NowPage = () => {
