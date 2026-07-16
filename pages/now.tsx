@@ -1,25 +1,24 @@
 import Head from 'next/head'
-import Link from 'next/link'
 import { Container } from 'react-bootstrap'
 import Layout from '../components/reusable/Layout'
-import { themeColor, themeSecondary } from '../theme'
+import { themeColor } from '../theme'
 
 const nowItems = [
   {
-    title: 'Building useful web3 products',
-    body: 'I am focused on shipping practical web3 interfaces, smart contract integrations, and documentation that make onchain tools easier to understand and use.'
+    title: 'Living in mainland China',
+    body: 'I am based in mainland China, building my days around family, focused work, and the rhythm of life here.'
   },
   {
-    title: 'Keeping Aavegotchi knowledge current',
-    body: 'A lot of my attention is going toward Aavegotchi ecosystem work, especially keeping user-facing docs and product surfaces aligned with how the protocol actually works today.'
+    title: 'Taking care of my toddler son',
+    body: 'Much of my time and attention goes toward raising my toddler son. Parenthood is reshaping how I think about time, patience, responsibility, and what is worth building.'
   },
   {
-    title: 'Selective consulting',
-    body: 'I am open to focused engineering work where I can help a small team move faster on Solidity, React, Next.js, or product architecture.'
+    title: 'Upskilling in agentic engineering',
+    body: 'I am rapidly deepening my agentic engineering skills, with a focus on designing reliable agent workflows and using them to build genuinely useful tools.'
   },
   {
-    title: 'Better personal systems',
-    body: 'I am using this page as a public reminder to keep my attention on fewer projects, better execution, and clearer communication.'
+    title: 'Helping Aavegotchi become DAO-led',
+    body: 'I am helping Aavegotchi transition from a single-studio model to a DAO-led model, with more responsibility, coordination, and execution distributed across the community.'
   }
 ]
 
@@ -35,7 +34,7 @@ const NowPage = () => {
         <Container>
           <main className="page">
             <div className="intro">
-              <div className="eyebrow">updated May 2026</div>
+              <div className="eyebrow">updated July 2026</div>
               <h1>now</h1>
               <p>
                 This is a snapshot of what I am focused on these days. It follows the
@@ -51,17 +50,6 @@ const NowPage = () => {
                   <p>{item.body}</p>
                 </article>
               ))}
-            </section>
-
-            <section className="availability" aria-label="Availability">
-              <h2>availability</h2>
-              <p>
-                If your project overlaps with these priorities, the best next step is
-                to send a short note with the problem you are trying to solve.
-              </p>
-              <Link legacyBehavior href="/#hire">
-                <a>get in touch</a>
-              </Link>
             </section>
           </main>
         </Container>
@@ -119,27 +107,6 @@ const NowPage = () => {
             padding: 28px 0;
           }
 
-          .availability {
-            background: rgba(201, 157, 102, 0.08);
-            border-left: 4px solid ${themeColor};
-            margin-top: 42px;
-            padding: 26px 28px;
-          }
-
-          .availability a {
-            color: ${themeColor};
-            display: inline-flex;
-            font-size: 20px;
-            font-weight: 500;
-            margin-top: 18px;
-            text-decoration: none;
-            transition: color 0.2s;
-          }
-
-          .availability a:hover {
-            color: ${themeSecondary};
-          }
-
           @media screen and (max-width: 768px) {
             .page {
               padding: 70px 0 60px;
@@ -151,10 +118,6 @@ const NowPage = () => {
 
             p {
               font-size: 18px;
-            }
-
-            .availability {
-              padding: 22px;
             }
           }
         `}</style>
